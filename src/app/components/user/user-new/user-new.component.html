@@ -1,0 +1,189 @@
+<div class="border-2 border-primary">
+	<div class="pt-2 pb-2 pl-3 bg-primary text-white">
+  	Registro Nuevo Usuario
+	</div>
+
+	<div class="pl-5 pr-5 pt-3">
+		<form>
+			<div class="form-row">
+				<h5 class="text-primary pl-1">DATOS PERSONALES</h5>
+			</div>
+			
+			<div class="form-row">
+				<div class="form-group col-md-4">
+					<label class="col-form-label col-form-label-sm font-weight-bold">
+						Nacionalidad
+					</label>
+					<input type="hidden" name="" class="form-control form-control-sm" disabled>
+					<input type="text" name="" class="form-control form-control-sm" disabled>
+				</div>
+
+				<div class="form-group col-md-4">
+					<label class="col-form-label col-form-label-sm font-weight-bold">
+						Tipo de Documento
+					</label>
+					<select class="form-control form-control-sm" disabled>
+						<option selected>DNI</option>
+					</select>
+				</div>
+
+				<div class="form-group col-md-4">
+					<label class="col-form-label col-form-label-sm font-weight-bold">
+						Número de Documento
+					</label>
+					<input type="text" name="" class="form-control form-control-sm" disabled>
+				</div>
+			</div>
+
+			<div class="form-row">
+				<div class="form-group col-md-4">
+					<label class="col-form-label col-form-label-sm font-weight-bold">
+						Apellido Paterno
+					</label>
+					<input type="text" name="" class="form-control form-control-sm" disabled>					
+				</div>
+
+				<div class="form-group col-md-4">
+					<label class="col-form-label col-form-label-sm font-weight-bold">
+						Apellido Materno
+					</label>
+					<input type="text" name="" class="form-control form-control-sm" disabled>
+				</div>
+
+				<div class="form-group col-md-4">
+					<label class="col-form-label col-form-label-sm font-weight-bold">
+						Nombres
+					</label>
+					<input type="text" name="" class="form-control form-control-sm" disabled>
+				</div>
+			</div>
+
+			<div class="form-row">
+				<div class="form-group col-md-4">
+					<label class="col-form-label col-form-label-sm font-weight-bold">
+						Estado Civil
+					</label>
+					<select class="form-control form-control-sm">
+						<option selected>[Seleccione]</option>
+						<option 
+							*ngFor="let estadoCivil of estadosCivil;"
+							value="{{estadoCivil.substring(0, 1)}}"
+						>{{estadoCivil}}</option>
+					</select>
+				</div>
+			</div>
+
+			<div class="form-row">
+				<h5 class="text-primary pl-1 mt-3">DATOS DE DOMICILIO</h5>
+			</div>
+
+			<div class="form-row">
+				<div class="form-group col-md-4">
+					<label class="col-form-label col-form-label-sm font-weight-bold">
+						Departamento
+					</label>
+					<select class="form-control form-control-sm">
+						<option selected>[Seleccione Departamento]</option>
+					</select>
+				</div>
+
+				<div class="form-group col-md-4">
+					<label class="col-form-label col-form-label-sm font-weight-bold">
+						Provincia
+					</label>
+					<select class="form-control form-control-sm">
+						<option selected>[Seleccione Provincia]</option>
+					</select>
+				</div>
+
+				<div class="form-group col-md-4">
+					<label class="col-form-label col-form-label-sm font-weight-bold">
+						Distrito
+					</label>
+					<select class="form-control form-control-sm">
+						<option selected>[Seleccione Distrito]</option>
+					</select>
+				</div>
+			</div>
+
+			<div class="form-row">
+				<div class="form-group col-md-2">
+					<label class="col-form-label col-form-label-sm font-weight-bold">
+						Urbanización
+					</label>
+					<input type="text" name="" class="form-control form-control-sm">
+				</div>
+
+				<div class="form-group col-md-2">
+					<label class="col-form-label col-form-label-sm font-weight-bold">
+						Vía (Av. Calle. Jr.)
+					</label>
+					<select class="form-control form-control-sm">
+						<option selected>[Seleccione]</option>
+					</select>
+				</div>
+
+				<div class="form-group col-md-8">
+					<label class="col-form-label col-form-label-sm font-weight-bold">
+						Dirección
+					</label>
+					<input type="text" name="" class="form-control form-control-sm">
+				</div>
+			</div>
+
+			<div class="form-row">
+				<h5 class="text-primary pl-1 mt-3">DATOS DE CONTACTO</h5>
+			</div>
+
+			<div class="form-row">
+				<div class="form-group col-md-4">
+					<label class="col-form-label col-form-label-sm font-weight-bold">
+						Teléfono
+					</label>
+					<input type="text" name="" class="form-control form-control-sm">
+				</div>
+
+				<div class="form-group col-md-4">
+					<label class="col-form-label col-form-label-sm font-weight-bold">
+						Celular
+					</label>
+					<input type="text" name="" class="form-control form-control-sm">
+				</div>
+
+				<div class="form-group col-md-4">
+					<label class="col-form-label col-form-label-sm font-weight-bold">
+						Correo
+					</label>
+					<input type="text" name="" class="form-control form-control-sm">
+				</div>
+			</div>
+
+			<div class="form-row">
+				<div class="form-group col-md-4">
+					<label class="col-form-label col-form-label-sm font-weight-bold">
+						Ingresa nuevamente Correo
+					</label>
+					<input type="text" name="" class="form-control form-control-sm">
+				</div>
+
+				<div class="form-group col-md-4">
+					<label class="col-form-label col-form-label-sm font-weight-bold">
+						Contraseña
+					</label>
+					<input type="text" name="" class="form-control form-control-sm">
+				</div>
+
+				<div class="form-group col-md-4">
+					<label class="col-form-label col-form-label-sm font-weight-bold">
+						Ingresa nuevamente Contraseña
+					</label>
+					<input type="text" name="" class="form-control form-control-sm">
+				</div>
+			</div>
+
+			<div class="form-row justify-content-end pr-1 mb-3 mt-3">
+				<input type="button" name="" class="btn btn-primary btn-md pl-3 pr-3 pt-2 pb-2 font-weight-bold-515" value="Registrar" [routerLink]="['/credentialsuser']">
+			</div>
+		</form>
+	</div>
+</div>

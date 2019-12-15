@@ -1,0 +1,45 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <!--<a class="navbar-brand" href="#">Menú</a>-->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" [routerLink]="['/calllist']">Convocatorias</a>
+      </li> 
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Administración
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" [routerLink]="['/administracion/convocatorias/listado']">Convocatorias</a>
+        </div>
+      </li>
+    </ul> 
+    <ul class="navbar-nav navbar-right" *ngIf="!identity">
+      <li class="nav-item active">
+        <a class="nav-link" [routerLink]="['/login']">Iniciar Sesión</a>
+      </li>      
+    </ul> 
+    <ul class="navbar-nav navbar-right" *ngIf="!identity">
+      <li class="nav-item active">
+        <a class="nav-link" [routerLink]="['/edituser']">Perfil Usuario</a>
+      </li>      
+    </ul> 
+  </div>
+</nav>  
+
+<div class="ml-2 mr-2 mt-2">
+  <router-outlet></router-outlet>  
+</div>
+  
+<footer>
+  <hr>
+  <p class="ml-2">
+    <!--Desarrollado por Piero Quelopana y Osmar Flores &copy;-->
+    Sistema de Convocatorias 2019
+  </p>  
+  <hr>
+</footer>

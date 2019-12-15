@@ -1,0 +1,40 @@
+<div class="border-2 border-primary">
+	<div class="pt-2 pb-2 pl-3 bg-primary text-white">
+  	Registro Nuevo Usuario
+	</div>
+
+	<div class="pl-4 pr-4 pt-2">
+		<form>
+			<div class="form-row">
+				<div class="form-group col-md-4">
+					<label class="col-form-label col-form-label-sm font-weight-bold">
+						Nacionalidad
+					</label>
+					<select class="form-control form-control-sm">
+						<option selected>Perú</option>
+					</select>
+				</div>
+
+				<div class="form-group col-md-4">
+					<label class="col-form-label col-form-label-sm font-weight-bold">
+						Tipo de Documento
+					</label>
+					<select class="form-control form-control-sm">
+						<option selected>DNI</option>
+					</select>
+				</div>
+
+				<div class="form-group col-md-4">
+					<label class="col-form-label col-form-label-sm font-weight-bold">
+						Número de Documento
+					</label>
+					<input type="text" name="" class="form-control form-control-sm">
+				</div>
+			</div>
+			<div class="form-row justify-content-end pr-1 mb-3">
+				<a class="btn btn-ghost btn-sm mr-1 pl-3 pr-3" [routerLink]="['/login']">Volver</a>
+				<a class="btn btn-primary btn-sm pl-3 pr-3" [routerLink]="['/newuser']">Siguiente</a>
+			</div>
+		</form>
+	</div>
+</div>

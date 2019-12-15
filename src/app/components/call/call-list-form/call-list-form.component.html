@@ -1,0 +1,77 @@
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Convocatorias Vigentes</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Convocatorias en Proceso</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Convocatorias Concluidas</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Convocatorias Anteriores</a>
+  </li>
+</ul>
+
+<div class="tab-content border-2 border-primary" id="myTabContent">
+  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+    <div class="pt-2 pb-2 pl-3 bg-primary text-white">
+      <!--<p class="font-weight-bold">Listado de Convocatorias</p>-->
+      Listado de Convocatorias
+    </div>    
+
+    <div class="pl-3 pr-3">
+      <form>
+        <div class="form-row">
+          <div class="form-group col-md-12">
+            <label for="buscar" class="col-form-label col-form-label-md"><strong>Buscar: </strong></label>
+            <input type="text" name="buscar" id="buscar" class="form-control form-control-sm">
+          </div>
+        </div>
+      </form>
+
+      <p class="text-primary">
+        Mostrando Registros
+      </p>
+
+      <table class="table table-bordered table-sm table-striped">
+        <thead>
+          <tr>
+            <th scope="col">CORRELATIVO</th>
+            <th scope="col">NOMBRE DE CONVOCATORIA</th>
+            <th scope="col">INICIO</th>
+            <th scope="col">FIN</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody class="border-top-4-primary border-bottom-4-primary">
+          <tr *ngFor="let convocatoria of convocatorias;">
+            <td>{{ convocatoria.idOficial }}</td>
+            <td>{{ convocatoria.nombre }}</td>
+            <td>{{ convocatoria.fechaInicio }}</td>
+            <td>{{ convocatoria.fechaFin }}</td>
+            <td><input type="button" name="" class="btn btn-primary btn-sm" value="VER"></td>
+            <td><input type="button" name="" class="btn btn-success btn-sm" value="Postular" [routerLink]="['/applicationregulations']"></td>
+          </tr>          
+        </tbody>        
+      </table>
+
+      <nav aria-label="...">
+        <ul class="pagination justify-content-end">
+          <li class="page-item disabled">
+            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Anterior</a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item active" aria-current="page">
+            <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#">Siguiente</a>
+          </li>
+        </ul>
+      </nav>
+    </div>    
+  </div>
+</div>
